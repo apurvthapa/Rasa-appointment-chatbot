@@ -1,0 +1,76 @@
+version: "3.1"
+
+stories:
+
+- story: simple_appointment
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_full_sentence
+  - action: action_update_csv
+
+- story: full_sentence
+  steps:
+  - intent: give_full_sentence
+  - action: action_update_csv
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_appointment
+  - action: utter_date
+  - intent: give_date
+    entities:
+    - times: 4 april 2023
+  - slot_was_set:
+    - time: 4 april 2023
+  - action: utter_time
+  - intent: give_time
+    entities:
+    - times: 4:30 pm
+  - slot_was_set:
+    - time: 4:30 pm
+  - action: utter_name
+  - intent: give_name
+    entities:
+    - names: apurv thapa
+  - slot_was_set:
+    - name: apurv thapa
+  - action: action_update_csv
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_appointment
+  - action: utter_date
+  - intent: give_date
+    entities:
+    - dates: 25-04-2023
+  - slot_was_set:
+    - date: 25-04-2023
+  - action: utter_time
+  - intent: give_time   
+    entities:
+    - times: 6 pm
+  - slot_was_set:
+    - time: 6 pm
+  - action: utter_name
+  - intent: give_name
+    entities:
+    - names: alex johnson
+  - slot_was_set:
+    - name: alex johnson
+  - action: action_update_csv
+
+- story: interactive_story_1
+  steps:
+  - intent: give_full_sentence
+    entities:
+    - names: apurv thapa
+    - dates: 30/03/2023
+    - times: 4 pm
+  - slot_was_set:
+    - date: 30/03/2023
+  - slot_was_set:
+    - time: 4 pm
+  - slot_was_set:
+    - name: apurv thapa
+  - action: action_update_csv

@@ -1,0 +1,147 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: call_for_appointment
+  examples: |
+    - make an appointment for [16/06/2023](dates) at [12:00](times)
+    - an appointment for [17/07/2023](dates) at [13:00](times)
+    - an appointment for [18-07-2023](dates) at [09:00](times)
+    - appointment for [19-07-2023](dates) at [4 pm](times)
+    - [10:30 am](times) appointment for [23-05-2023](dates)
+    - [27 march 2023](dates) appointment for [5 pm](times)
+- intent: give_name
+  examples: |
+    - name is [Apurv Thapa](names)
+    - I am [Robert Downey Junior](names)
+    - [Aman Kumar](names)
+    - [Jessica Jones](names)
+    - [arnab goswami](names)
+    - [apurv thapa](names)
+    - [alex johnson](names)
+    - [jessica jones](names)
+- intent: give_time
+  examples: |
+    - [4 pm](times)
+    - [4:30 am](times)
+    - [5 am](times)
+    - [7 pm](times)
+    - [4 april 2023](times)
+    - [4:30 pm](times)
+    - [6 pm](times)
+- intent: give_date
+  examples: |
+    - [27-05-2023](dates)
+    - [27 march 2023](dates)
+    - [28 mar 2023](dates)
+    - [25-04-2023](dates)
+    - [16/06/2023](dates)
+- intent: give_full_sentence
+  examples: |
+    - book an appointment for [Apurv Thapa](names) for [31/07/2023](dates) at [6 pm](times)
+    - Book an appointment for [John Doe](names) on [15/04/2023](dates) at [10 am](times).
+    - Can you schedule an appointment for [Lisa Smith](names) on [20/05/2023](dates) at [2 pm](times)?
+    - Please book an appointment for [Michael Johnson](names) for [07/06/2023](dates) at [3:30 pm](times).
+    - I'd like to schedule an appointment for [Sarah Lee](names) on [10/07/2023](dates) at [11 am](times).
+    - Book an appointment for [Alex Kim](names) for [25/08/2023](dates) at [4 pm](times).
+    - Can you please schedule an appointment for [Emily Brown](names) on [09/09/2023](dates) at [1 pm](times)?
+    - Please book an appointment for [daniel lee](names) on [11/10/2023](dates) at [2:30 pm](times).
+    - I want to schedule an appointment for [Rachel Chen](names) on [19/11/2023](dates) at [9 am](times).
+    - Book an appointment for [David Lee](names) for [24/12/2023] at [5 pm](times).
+    - Can you please schedule an appointment for [Jessica Kim](names) on [28/01/2024](dates) at [3 pm](times)?
+    - book appointment for [apurv thapa](names) on [31/01/2023](dates) at [4pm](times).
+    - book an apointment for [apurv thapa](names) on [30/03/2023](dates) at [4 pm](times)
+- intent: ask_appointment
+  examples: |
+    - Hi, I would like to book an appointment, please.
+    - I was hoping to schedule an appointment. Can you help me with that?
+    - I need to make an appointment. How can I do that?
+    - Could you assist me in booking an appointment, please?
+    - I'm interested in setting up an appointment. What are my options?
+    - I would like to arrange an appointment. Can you tell me how to do that?
+    - Is it possible to schedule an appointment for me, please?
+    - I would like to book a meeting with you. What's the best way to do that?
+    - Can you help me schedule an appointment ?
+    - I would like to make a reservation for meeting.
+    - book an appointment.
+    - book an appointment

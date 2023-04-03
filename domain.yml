@@ -1,0 +1,64 @@
+version: '3.1'
+intents:
+- affirm
+- ask_appointment
+- bot_challenge
+- call_for_appointment
+- deny
+- give_date
+- give_full_sentence
+- give_name
+- give_time
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+entities:
+- times
+- dates
+- names
+slots:
+  date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: dates
+  time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: times
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: names
+responses:
+  utter_greet:
+  - text: Hey! I am an appointment booking bot. How may I help you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_name:
+  - text: Type in your name to confirm the appointment
+  utter_date:
+  - text: Can you confirm the date for the appointment
+  utter_time:
+  - text: Can you confirm the time for the appointment
+actions:
+- action_update_csv
+- utter_name
+- utter_date
+- utter_time
+- date_update
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
